@@ -1,0 +1,221 @@
+/* 日记本 — 简约纸质感样式 */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #fdfaf4;
+  --text: #3a3a3a;
+  --muted: #999;
+  --border: #e8e0d5;
+  --accent: #6b5b4f;
+  --max-width: 680px;
+}
+
+body {
+  font-family: "Noto Serif SC", "Source Han Serif SC", Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 头部 */
+.site-header {
+  padding: 60px 0 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 50px;
+}
+
+.site-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.site-title:hover {
+  color: var(--accent);
+}
+
+.site-desc {
+  display: block;
+  margin-top: 6px;
+  font-size: 15px;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+/* 日记列表 */
+.post-entry {
+  margin-bottom: 48px;
+}
+
+.post-date {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.post-title {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.post-title a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.post-title a:hover {
+  color: var(--accent);
+}
+
+.post-excerpt {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.7;
+}
+
+/* 单篇日记 */
+.post-full .post-header {
+  margin-bottom: 40px;
+}
+
+.post-full .post-title {
+  font-size: 26px;
+  margin-top: 4px;
+}
+
+.post-content {
+  font-size: 17px;
+  line-height: 2;
+}
+
+.post-content p {
+  margin-bottom: 1.5em;
+  text-indent: 2em;
+}
+
+.post-content p:first-child {
+  text-indent: 0;
+}
+
+.post-content h2 {
+  font-size: 20px;
+  margin: 2em 0 0.8em;
+}
+
+.post-content h3 {
+  font-size: 18px;
+  margin: 1.5em 0 0.6em;
+}
+
+.post-content blockquote {
+  margin: 1.5em 0;
+  padding: 0.5em 1.2em;
+  border-left: 3px solid var(--border);
+  color: #777;
+  font-style: italic;
+}
+
+.post-content ul, .post-content ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.post-content li {
+  margin-bottom: 0.4em;
+}
+
+.post-content img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.post-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 3em auto;
+  width: 30%;
+}
+
+/* 导航 */
+.post-nav {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border);
+}
+
+.back-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+/* 空状态 */
+.empty-hint {
+  text-align: center;
+  color: var(--muted);
+  font-size: 15px;
+  margin-top: 80px;
+}
+
+/* 页脚 */
+.site-footer {
+  margin-top: 80px;
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .site-header {
+    padding: 40px 0 30px;
+    margin-bottom: 35px;
+  }
+
+  .site-title {
+    font-size: 24px;
+  }
+
+  .post-entry {
+    margin-bottom: 35px;
+  }
+
+  .post-full .post-title,
+  .post-title {
+    font-size: 20px;
+  }
+
+  .post-content {
+    line-height: 1.9;
+  }
+}

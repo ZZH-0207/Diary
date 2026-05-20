@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="post-list">
+  {% for post in site.posts %}
+  <article class="post-entry">
+    <time class="post-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+      {{ post.date | date: "%Y 年 %m 月 %d 日" }}
+    </time>
+    <h2 class="post-title">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h2>
+    <div class="post-excerpt">
+      {{ post.excerpt | strip_html | truncate: 120 }}
+    </div>
+  </article>
+  {% endfor %}
+
+  {% if site.posts.size == 0 %}
+  <p class="empty-hint">还没有日记，开始写第一篇吧。</p>
+  {% endif %}
+</div>

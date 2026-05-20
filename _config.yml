@@ -1,0 +1,20 @@
+title: 我的日记本
+description: 记录生活的每一天
+baseurl: ""
+url: ""
+
+markdown: kramdown
+
+# Disable features we don't need
+plugins: []
+
+exclude:
+  - README.md
+  - LICENSE
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
